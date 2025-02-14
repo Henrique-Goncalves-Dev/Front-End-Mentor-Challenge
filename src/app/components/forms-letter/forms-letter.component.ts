@@ -25,7 +25,7 @@ import {FormletterService} from '../../services/formletter.service';
   templateUrl: './forms-letter.component.html',
   styleUrl: './forms-letter.component.scss'
 })
-export class FormsLetterComponent implements ControlValueAccessor {
+export class FormsLetterComponent  {
   formletterForm!: FormGroup;
   loading = signal(false);
 
@@ -68,28 +68,6 @@ export class FormsLetterComponent implements ControlValueAccessor {
     }
   }
 
-
-  value: string = ''
-  onChange: any = () => {}
-  onTouched: any = () => {}
-  onInput(event: Event){
-    const value = (event.target as HTMLInputElement).value
-    this.onChange(value)
-  }
-
-  writeValue(value: any): void {
-    this.value = value
-  }
-
-  registerOnChange(fn: any): void {
-    this.onChange = fn
-  }
-
-  registerOnTouched(fn: any): void {
-    this.onTouched = fn
-  }
-
-  setDisabledState(isDisabled: boolean): void {}
 
 
 
