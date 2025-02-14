@@ -1,0 +1,17 @@
+@use '../../../color-variables.scss' as *;
+
+.btn{
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  color: white;
+  background: $primary-color;
+
+  cursor: pointer;
+  padding: 20px 40px;
+
+
+
+
+
+}

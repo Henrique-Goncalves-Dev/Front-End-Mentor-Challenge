@@ -1,0 +1,140 @@
+@use '../../../color-variables.scss' as *;
+
+/* Layout base (Mobile First) */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Estiliza inputs */
+.first-name input,
+.last-name input,
+.email input {
+  border: 1px solid $primary-color;
+  border-radius: 7px;
+  height: 30px;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.first-name span,
+.last-name span,
+.email span {
+  color: hsl(187, 24%, 22%);
+}
+
+/* Estiliza labels */
+.text-firstname,
+.text-lastname,
+.text-email {
+  padding: 5px;
+  border-radius: 5px;
+  color: hsl(187, 24%, 22%);
+  font-family: 'Karla', sans-serif;
+}
+
+/* Query Type (Botões de rádio) */
+.General,
+.Support {
+  border: 1px solid $primary-color;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 5px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* Labels dentro do Query Type */
+.text-General,
+.text-support {
+  padding: 5px;
+  border-radius: 5px;
+  color: hsl(187, 24%, 22%);
+}
+
+/* Estiliza a área de mensagem */
+.textarea {
+  width: 100%;
+  border: 1px solid $primary-color;
+  border-radius: 7px;
+  outline: none;
+  padding: 5px;
+  height: clamp(5em, 10em, 20em);
+  resize: none;
+}
+
+/* Centraliza checkbox */
+.Newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+/* Layout responsivo - Telas médias */
+@media (min-width: 768px) {
+  /* Alinha os inputs lado a lado */
+  .name-fields {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .name-fields div {
+    width: 48%;
+  }
+}
+
+/* Layout responsivo - Telas grandes */
+@media (min-width: 1080px) {
+  .form-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 115px;
+    padding: 40px 120px;
+  }
+
+  /* Inputs lado a lado no desktop */
+  .name-fields {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .name-fields div {
+    width: 48%;
+  }
+
+  /* Botões de rádio lado a lado */
+  .radio-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .radio-group .General,
+  .radio-group .Support {
+    width: auto;
+  }
+}

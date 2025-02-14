@@ -1,0 +1,45 @@
+<section class="form-group">
+  <form [formGroup]="formletterForm" (ngSubmit)="onSubmit()">
+    <div class="first-name">
+      <label for="firstName" class="text-firstname">First Name <span> *</span></label>
+      <input id="firstName" formControlName="firstName">
+    </div>
+
+    <div class="last-name">
+      <label for="lastName" class="text-lastname">Last Name <span> *</span></label>
+      <input id="lastName" formControlName="lastName">
+    </div>
+
+    <div class="email">
+      <label for="emailAddress" class="text-email">Email Address <span> *</span> </label>
+      <input id="emailAddress" formControlName="emailAddress">
+    </div>
+
+    <label>Query Type <span> *</span> </label>
+    <div class="General">
+      <input type="radio" id="generalQuery" name="queryType" formControlName="queryType" value="General">
+      <label for="generalQuery" class="text-General">General Enquiry</label>
+    </div>
+
+    <div class="Support">
+      <input type="radio" id="supportQuery" name="queryType" formControlName="queryType" value="Support">
+      <label for="supportQuery" class="text-support">Support Request</label>
+    </div>
+
+    <div class="Message">
+      <label for="message" class="text-message">Message <span> *</span></label>
+      <textarea id="message" name="message" class="textarea" formControlName="message"></textarea>
+    </div>
+
+    <div class="Newsletter">
+      <input type="checkbox" id="subscribeNewsletter" formControlName="checkBox">
+      <label for="subscribeNewsletter" class="text-color">
+        I consent to being contacted by the team <span> *</span>
+      </label>
+    </div>
+
+    <button-primary btn-text="SUBMIT"
+                    variant="secondary"
+                    (submit)="onSubmit()"></button-primary>
+  </form>
+</section>
